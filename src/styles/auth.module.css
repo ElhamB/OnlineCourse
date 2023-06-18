@@ -1,0 +1,204 @@
+.auth{
+    height: 650px;
+    background-position: -320px -370px;
+    
+}
+.authContainer{
+    height: 650px;
+    background-position: 1130px 130px;
+    rotate: (-30deg);
+}
+
+.authImg img{
+    height: 100%;
+    width: 100%;
+}
+.logo{
+    margin-top: 15px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.authfrm{
+    height: 450px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 2px solid #00adef;
+    margin-top: 70px;
+    position: relative;
+}
+.authfrm h4{
+    background-color: #fff;
+    color: #00adef;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+.inputFrm{
+    height: 45px;
+    padding: 5px;
+    border:2px solid #cdcdcd;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+.authfrm label{
+    color:#808080;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.BtnFrm, .BtnRecover{
+    background-color: #00adef;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    margin-top: -15px;
+    margin-left: 10px;
+    color: #fff;
+    border:1px solid #00adef;
+    box-shadow: 0px 5px 10px 0 #cdcdcd;
+    float: left;
+    transition: 0.3s;
+}
+.BtnFrm:hover{
+    background-color: #fff;
+    color: #00adef;
+}
+.authfrm .loginlink{
+    border:1px solid #04a641;
+    line-height: 38px;
+    margin-top: -15px;margin-right: 10px;
+    height: 40px;
+    border-radius: 7px;
+    float: right;
+    text-align: center;
+    transition: 0.3s;
+    color: #04a641;
+}
+.loginlink:hover{
+    background-color: #04a641;
+    color: #fff;
+}
+.frmMsg{
+    width: 50%;
+    height: 50px;
+    background-color: #fffaba;
+    border: 1px solid #eee88f;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    margin:10px auto;
+    top: -90px;
+    margin-right: 25%;
+    margin-bottom: 10px;
+}
+.loginfrm{
+    border:2px solid #04a641;
+    height: 450px;
+    border-radius: 15px;
+    background-color: #fff;
+    margin-top: 70px;
+    position: relative;
+
+}
+.loginfrm h4{
+    background-color: #fff;
+    color: #04a641;
+    font-size: 34px;
+    margin-top: -24px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+.loginfrm label{
+    color:#808080;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.SubLogin, .SubRecover {
+    border:1px solid  #00adef;
+    line-height: 38px;
+    margin-top: -15px;margin-right: 10px;
+    height: 40px;
+    border-radius: 7px;
+    float: right;
+    text-align: center;
+    transition: 0.3s;
+    color:  #00adef;
+}
+.SubLogin:hover{
+    background-color: #00adef;
+    color: #fff;
+}
+.logImg{
+   float: right;
+    height: 100%;
+    width: 100%;
+}
+.FrmLogin{
+    border-color: #04a641;
+
+}
+.remmerMe{
+    margin-bottom: 30px;
+}
+.FrmLogin h4{
+    color: #04a641;
+}
+.ForgetLink{
+    color: #00adef;
+    font-size: 12px;
+    border: none;
+}
+.BtnFrmlog {
+    background-color: #04a641;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    margin-top: -15px;
+    margin-left: 10px;
+    color: #fff;
+    border:1px solid #04a641;
+    box-shadow: 0px 5px 10px 0 #cdcdcd;
+    float: left;
+    transition: 0.3s;
+}
+.BtnFrmlog:hover{
+    background-color: #fff;
+    color: #04a641;
+}
+.Recoverfrm{
+    height: 450px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 2px solid #00adef;
+    margin-top: 70px;
+    position: relative;
+}
+.FrmRecover{
+    border-color: #04a641;
+
+}
+.BtnRecover{
+    background-color: #24047c;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    margin-top: -15px;
+    margin-left: 10px;
+    color: #fff;
+    border:1px solid #24047c;
+    box-shadow: 0px 5px 10px 0 #cdcdcd;
+    float: left;
+    transition: 0.3s;
+
+}
+.inputRecover{
+    height: 45px;
+    padding: 5px;
+    border:2px solid #cdcdcd;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}

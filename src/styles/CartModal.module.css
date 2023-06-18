@@ -1,0 +1,25 @@
+.cartList {
+   background-color: #323232;
+   box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.1);
+   height: 100%;
+   padding: 20px 25px;
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   transition: all 0.4s ease 0s;
+   width: 350px;
+   max-width: 100%;
+   z-index: 1001;
+}
+
+.closeBasketList {
+   color: #f5f5f5;
+   cursor: pointer;
+}
+
+.titleBasketBag {
+   font-size: 18px;
+   color: #f5f5f5;
+}
+

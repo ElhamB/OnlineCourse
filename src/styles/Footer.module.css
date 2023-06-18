@@ -1,0 +1,139 @@
+.footer {
+  /* background: #1D1D1D  url("../assets/images/hexagon-bg.svg") no-repeat 0 0; */
+  background-color:#1D1D1D ;
+  color: #848484;
+}
+
+.footerContainer {
+  width: 1280px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.copyRight{
+  background-color: #171717;
+}
+
+.copyLink a,.copyLink span {
+  color: #848484;
+  display: inline-block;
+}
+.copyText,.footer a{
+  color: #848484;
+}
+.borderRighLeft{
+  position: relative;
+}
+.borderRighLeft::before{
+  content: '';
+  height: 60px;
+  border: 1px solid #E6E6E626;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.borderRighLeft::after{
+  content: '';
+  height: 60px;
+  border: 1px solid #E6E6E626;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.links li{
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+.links li a span {
+  position: relative;
+}
+.links li a span::after{
+  content: "";
+  position: absolute;
+  bottom:-5px;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.5s cubic-bezier(0.35, 0.7, 0.35, 1);
+}
+.links li a:hover span::after{
+width: 100%;
+}
+.footer h3{
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.courses li{
+list-style-type: none;
+margin-bottom: 20px;
+margin-left: 20px;
+float: right;
+}
+.courses li a{
+overflow: hidden;
+display: block;
+}
+.courses li a img{
+  transition: 0.5s;
+}
+.courses li a:hover img{
+  transform: scale(1.1);
+}
+.socialNetworks{
+  margin-top: 2rem;
+  display: flex;
+
+}
+.socialNetworks a{
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socialNetworks a:hover,.socialNetworks a:focus{
+  transition: 0.5s;
+  background-color: var(--yellow-color);
+}
+.socialNetworks a i{
+  transition: 0.5s;
+}
+.socialNetworks a:hover i {
+  transform: rotateY(180deg);
+}
+.newsLetterContainer{
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.newsLetterContainer input{
+  width: 100%;
+}
+.buttonNewsLetter{
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: var(--yellow-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 991.98px) {
+
+}
+@media screen and (max-width: 767.98px) {
+
+}

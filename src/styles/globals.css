@@ -1,0 +1,377 @@
+body {
+  direction: rtl;
+}
+:root {
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --blue-color: #0084fd;
+  --yellow-color: #ffc72c;
+  --green-color: #04a641;
+  --red-color: #ff0000;
+  --darkgreen-color: #05983d;
+  --dark-blue-color: #111517;
+  --black-color:#2b2b2b;
+}
+
+@font-face {
+  font-family: "Yekan Bakh medium";
+  src: url("../assets/fonts/YekanBakh-Medium.eot");
+  src: local("../assets/fonts/YekanBakh-Medium"),
+    url("../assets/fonts/YekanBakh-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/YekanBakh-Medium.woff2") format("woff2"),
+    url("../assets/fonts/YekanBakh-Medium.woff") format("woff"),
+    url("../assets/fonts/YekanBakh-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yekan Bakh bold";
+  src: url("../assets/fonts/YekanBakh-Bold.eot");
+  src: local("../assets/fonts/YekanBakh-Bold"),
+    url("../assets/fonts/YekanBakh-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/YekanBakh-Bold.woff2") format("woff2"),
+    url("../assets/fonts/YekanBakh-Bold.woff") format("woff"),
+    url("../assets/fonts/YekanBakh-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("../assets/fonts/YekanBakh-Light.eot");
+  src: local("../assets/fonts/YekanBakh-Light"),
+    url("../assets/fonts/YekanBakh-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/YekanBakh-Light.woff2") format("woff2"),
+    url("../assets/fonts/YekanBakh-Light.woff") format("woff"),
+    url("../assets/fonts/YekanBakh-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0.3)
+    );
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+caption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: middle;
+  outline: none;
+}
+body {
+  direction: rtl;
+  font-family: "Yekan Bakh";
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  text-align: right;
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: "Yekan Bakh bold";
+}
+a,
+a:hover,
+a:focus {
+  color: #0485c8;
+  text-decoration: none;
+  outline: none;
+}
+main {
+  min-height: 550px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+button:focus,
+input,
+button,
+input:focus {
+  outline: none;
+}
+.modal-backdrop {
+  z-index: 90;
+}
+.modal {
+  z-index: 100;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+.p-component {
+  font-family: "Yekan Bakh";
+}
+.p-button {
+  padding: 0.45rem 1.25rem;
+}
+.buttn-yellow {
+  background-color: var(--yellow-color);
+  border-color: var(--yellow-color);
+}
+.buttn-yellow:hover,
+.buttn-yellow:focus {
+  background-color: #e7b428 !important;
+  border-color: #e7b428 !important;
+}
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none;
+  border-color: var(--yellow-color);
+}
+.backToTopButton {
+  background-color: var(--yellow-color) !important;
+  border-color: var(--yellow-color) !important;
+  bottom: 25px;
+  right: 25px;
+  position: fixed;
+  font-size: 50px;
+  color: #ffffff;
+  width: 45px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+  transition: 0.5s;
+}
+.p-button:focus,.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus {
+  box-shadow: none;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
+  background: none;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link span::after{
+  content: "";
+  position: absolute;
+  bottom:5px;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--yellow-color);
+  transition: width 0.5s cubic-bezier(0.35, 0.7, 0.35, 1);
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:hover span::after{
+  width: 100%;
+  }
+  .text-center{
+    text-align: center;
+  }
+
+  .allLink {
+    background: transparent none repeat scroll 0 0;
+    color: var(--yellow-color);
+   font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 15px 57px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+.allLink:hover,.allLink:focus{
+        color: var(--blue-color);
+}
+.allLink.btn_style1_bg{background: transparent none repeat scroll 0 0;}
+.allLink .top {
+    height: 1px;
+    left: 20px;
+    top: 0;
+    transition: left 0.4s ease 0s, background 0.4s ease 0s;
+    width: 100%;
+    position: absolute;
+}
+.allLink .left {
+    height: 100%;
+    left: 0;
+    transition: top 0.3s ease 0.1s, background 0.4s ease 0s;
+    width: 1px;
+    position: absolute;
+}
+.allLink .left_bottom {
+    top: 20px;
+}
+.allLink .left_top {
+    top: -100%;
+}
+.allLink .bottom {
+    bottom: 0;
+    height: 1px;
+    transition: right 0.4s ease 0.2s, background 0.4s ease 0s;
+    width: 100%;
+    position: absolute;
+}
+.allLink .bottom_right {
+    right: 0;
+}
+.allLink .bottom-left {
+    right: 100%;
+}
+.allLink .right {
+    height: 100%;
+    right: 0;
+    top: 0;
+    transition: top 0.4s ease 0.1s, background 0.4s ease 0s;
+    width: 1px;
+    position: absolute;
+}
+.allLink:hover .top {
+    left: 0;
+}
+.allLink:hover .left_bottom {
+    top: 0;
+}
+.allLink:hover .bottom_right {
+    right: 25px;
+}
+.allLink:hover .right {
+    top: -18px;
+}
+.allLink .button_border {
+    background: var(--yellow-color) none repeat scroll 0 0;
+}
+.allLink:hover .button_border {
+  background: var(--blue-color) none repeat scroll 0 0;
+}
+.p-card-header{
+  overflow: hidden;
+}
+.p-card-header:hover img{
+  transform: scale(1.1);
+}
+.p-card .p-card-title{
+  margin-bottom: 0 !important;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+    padding: 0.5rem 1rem;
+  }
+  .menu-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor:url('../assets/images/icon-close.png'), auto;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 220;
+ }
+ .p-menubar{
+  padding-right: 0;
+ }
+ .p-breadcrumb{
+  border: none;
+ }
+ .p-breadcrumb ul li .p-menuitem-link{
+  border: none;
+ }
+ .p-breadcrumb ul li .p-menuitem-link:focus,.p-breadcrumb ul li .p-menuitem-link:hover{
+  box-shadow: none;
+ }
+ .p-breadcrumb ul li .p-menuitem-link:focus .p-menuitem-text,.p-breadcrumb ul li .p-menuitem-link:hover .p-menuitem-text{
+  color: var(--blue-color);
+ }
