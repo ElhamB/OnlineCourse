@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+}
+.hero::after {
+  content: "";
+  height: 515px;
+  width: 300px;
+  position: absolute;
+  background-color: #0385fe;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.GrilPic {
+  position: relative;
+  height: 512px;
+  z-index: 2;
+}
+.GrilPic img {
+  position: absolute;
+  left: 30px;
+  bottom: 0px;
+}
+
+.hero h1 {
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+.counter h3 {
+  margin-top: 40px;
+  font-size: 35px;
+  text-align: center;
+}
+.counter h3 i{
+  margin-left: 5px;
+}
+.counter p {
+  text-align: center;
+  display: block;
+}
+.titleSection{
+  margin-bottom: 50px;
+  font-size: 2rem;
+}

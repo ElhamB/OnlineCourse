@@ -1,0 +1,114 @@
+.cartBox {
+   margin-top: 20px;
+}
+
+.cartBox ul {
+   margin-left: 10px;
+}
+
+.cartBox ul li {
+   width: 100%;
+   height: 100%;
+   margin-top: 8px;
+   margin-bottom: 20px;
+   display: flex;
+   user-select: none;
+   -webkit-user-select: none;
+}
+
+.cartBox ul li .pic {
+   width: 80px;
+   position: relative;
+   display: block;
+   z-index: 1;
+   margin-left: 20px;
+}
+
+.cartBox ul li .pic a {
+   display: block;
+}
+
+.cartBox ul li .pic a img {
+   width: 100%;
+}
+
+.cartBox ul li .pic .closeBasket {
+   background-color: #fefefe;
+   color: #888;
+   text-align: center;
+   width: 23px;
+   height: 23px;
+   line-height: 23px;
+   font-size: 13px;
+   position: absolute;
+   top: -7px;
+   left: -7px;
+   border-radius: 50%;
+   z-index: 3;
+   cursor: pointer;
+}
+
+.cartBox ul li .pic .closeBasket:hover {
+   background-color: var(--yellow-color);
+   color: #fff;
+}
+
+.cartBox ul li .left {
+   color: #fff;
+}
+
+.cartBox ul li .left span {
+   font-size: 15px;
+}
+.cartBox ul li .left .priceCount{
+margin-bottom:7px;
+}
+.cartTotal {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+.totalBasket {
+   border-top: solid 2px #4f4d50;
+   padding-top: 20px;
+
+}
+.totalBasket .cartTotal:last-child{
+    border-top: solid 2px #4f4d50;
+    padding-top: 10px;
+}
+.totalBasket .cartTotal:nth-child(2){
+    margin-bottom: 15px;
+}
+.cartTotal .priceTitle,
+.cartTotal .priceTotal {
+   color: #f0f0f0;
+   font-size: 16px;
+}
+
+.cartTotal .priceTotal ,.noItem{
+   color: #fff;
+}
+
+.count-basket .btn-quantity input,.count-basket .btn-quantity button{
+color: #ddd;
+}
+.cart-list .btn-default{
+width: 100%;
+margin-top: 20px;
+}
+.btnPayment{
+   text-align: center;
+   background-color: var(--yellow-color);
+   border-color: var(--yellow-color);
+   display: flex;
+   width: 100%;
+}
+.btnPayment:hover,.btnPayment:focus{
+   background-color: var(--blue-color);
+   border-color: var(--blue-color);
+}

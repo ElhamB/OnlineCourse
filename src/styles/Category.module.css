@@ -1,0 +1,40 @@
+/* .category{
+  background: #ffffff url("../assets/images/bg-right2.png") no-repeat -80% 0;
+  background-size: auto;
+  background-size: 998px 1124px;
+  padding: 50px 0 180px 0;
+} */
+.boxc {
+  text-align: center;
+  box-shadow: 3px 3px 4px rgba(97, 88, 88, 0.3);
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid #fbf8f8;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 130px;
+  background-color: #fff;
+}
+.categoryCon{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.boxCon{
+  position: relative;
+}
+
+
+
+
+
+.text {
+  margin-top: 15px;
+  font-size: 24px;
+}
+.Image {
+  float: left;
+  margin-top: 10px;
+}
