@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from "react";
 import MainLayout from "@/components/common/MainLayout";
-import Category from "@/components/Category/Category";
 import { TeacherLanding } from "@/components/Teacher";
 import News from "@/components/News";
 import Services from "@/components/Services/Services";
@@ -29,7 +28,6 @@ const Home=()=> {
     return(
       <>
       <Hero/>
-      <Category />
       <CoursesLanding/>
       <News/>
       <TeacherLanding/>

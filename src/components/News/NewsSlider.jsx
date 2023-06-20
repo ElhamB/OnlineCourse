@@ -40,7 +40,7 @@ const NewsSlider = () => {
   ];
   /** */
   const [products, setProducts] = useState([]);
-  const header = <Image src={imageNews} />;
+  const header = <Image src={imageNews} alt="" />;
 
   const responsiveOptions = [
     {
