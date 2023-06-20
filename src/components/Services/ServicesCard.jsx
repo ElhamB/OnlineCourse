@@ -7,7 +7,7 @@ const ServiceCard = ({ serviceItem }) => {
       <div className={style.serviceContainer}>
         <div className={style.serviceFront}>
           <div className={style.imgContainer}>
-            <Image width="60" className="mt-2 mb-2" src={serviceItem.img} />
+            <Image width="60" className="mt-2 mb-2" src={serviceItem.img} alt={serviceItem.title} />
           </div>
           <h4 className="pt-5 text-center">{serviceItem.title}</h4>
         </div>
