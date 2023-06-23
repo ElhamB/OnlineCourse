@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { formatCurrency } from "../common/FormatCurrency";
+import { formatCurrency } from "@/core/utils";
 import CartItem from "./CartItem";
 import { Button } from "primereact/button";
 import { ScrollPanel } from 'primereact/scrollpanel';

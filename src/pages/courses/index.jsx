@@ -1,9 +1,9 @@
 import MainLayout from "@/components/common/MainLayout";
 import React,{ useEffect, useState } from "react";
 import style from "@/styles/Courses.module.css"
-import CourseCard from "@/components/Courses/CourseCard";
+import CourseCard from "@/components/Course/CourseCard";
 import { Paginator } from 'primereact/paginator';
-import SideBar from "@/components/Courses/sidebar";
+import SideBar from "@/components/Course/sidebar";
 import axios from "axios";
 
 const courses = () =>{

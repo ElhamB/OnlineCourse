@@ -3,7 +3,7 @@ import MainLayout from "@/components/common/MainLayout";
 import { TeacherLanding } from "@/components/Teacher";
 import News from "@/components/News";
 import Services from "@/components/Services/Services";
-import CoursesLanding from "@/components/Courses";
+import CoursesLanding from "@/components/Course";
 import Hero from "@/components/Hero";
 import { Button } from 'primereact/button';
 
