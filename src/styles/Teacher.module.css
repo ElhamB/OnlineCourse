@@ -1,0 +1,42 @@
+.TeacherCard{
+    align-content: center;
+}
+.TeacherCard img{
+    width: 50%;
+    height: 50%;
+    margin: 15px 25%;
+}
+.TeacherCard h6{
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    margin: 5px auto;
+}
+.TeacherCard span{
+    float: right;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+}
+.TeacherCard ul{
+    margin: auto;
+}
+.TeacherCard ul li{
+    list-style: none;
+    width: 20%;
+    margin: 0 2%;
+    float: right;
+    padding-top: 3px;
+    text-align: center;
+    height:25px;
+    color: #a6a6a6;
+    transition: 0.3s;
+    border: 1px solid #a6a6a6;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.TeacherCard ul li:hover{
+    color: #575757;
+    border-color: #575757;
+}
