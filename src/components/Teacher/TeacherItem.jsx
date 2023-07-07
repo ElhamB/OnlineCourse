@@ -1,32 +1,66 @@
 import React from "react";
 import Image from "next/image";
-import style from "@/styles/Teacher.module.css";
-// import img from "@/assets/images/Group 1440.png";
-import ImgTeacher from "@/assets/images/portrait-woman-holding-clip-board-hands-writing-paper-wearing-glasses-isolated-grey-wall.png";
-
-import { Card } from 'primereact/card';
 import Link from "next/link";
+import { useRouter } from "next/router";
+import style from "@/styles/Teacher.module.css";
 
-const TeacherItem = ({ image }) => {
-  const header=<><Image alt="teacherImg" src={ImgTeacher} />
-  <h6>خانم موسوی</h6><span>طراح سایت</span></>;
-  const footer=<div className="grid">
-    <div className="col-6"><p> <i className="pi pi-desktop"></i> 12 درس </p></div>
-    <div className="col-6"><p> <i className="pi pi-star-fill"></i> 4.5</p></div>
-  </div>;
+const TeacherItem = ({ teacherItem }) => {
+  const router = useRouter();
+
   return (
-    <>
-      <div className={"col-3 " + style.TeacherCard}>
-        <Card footer={footer} header={header}>
-          <ul className="col-10">
-            <li><i className="pi pi-linkedin"></i></li>
-            <li><i className="pi pi-vimeo"></i></li>
-            <li><i className="pi pi-facebook"></i></li>
-            <li><i className="pi pi-twitter"></i></li>
-          </ul>
-        </Card>
-      </div>
-    </>
+    <div
+      className="md:col-3 sm:col-6 col-12"
+      onClick={() =>
+        router.push(`/teacher/${encodeURIComponent(teacherItem._id)}`)
+      }>
+      <figure className={"text-center p-3 mb-6 " + style.TeacherCard}>
+        <div className={style.imgContainer}>
+          <Image
+            alt={teacherItem.fullName}
+            className="border-circle"
+            src={teacherItem.profile}
+            width={200}
+            height={200}
+          />
+        </div>
+        <figcaption>
+          <h4 className="text-lg mb-2">{teacherItem.fullName}</h4>
+          <span className="mb-1">طراح سایت</span>
+          <div className={style.techerSocialMedia + " text-center mb-2"}>
+            <ul>
+              <li>
+                <Link href={""}>
+                  <i className="pi pi-linkedin"></i>
+                </Link>
+              </li>
+              <li>
+                <Link href={""}>
+                  <i className="pi pi-vimeo"></i>
+                </Link>
+              </li>
+              <li>
+                <Link href={""}>
+                  <i className="pi pi-facebook"></i>
+                </Link>
+              </li>
+              <li>
+                <Link href={""}>
+                  <i className="pi pi-twitter"></i>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="grid border-top-1 border-gray-200">
+            <div className="col-6 mt-2">
+              <i className="pi pi-desktop ml-2"></i> 12 درس
+            </div>
+            <div className="col-6 mt-2">
+              <i className="pi pi-star-fill ml-2"></i> 4.5
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
   );
 };
 

@@ -1,27 +1,29 @@
-import React from "react";
-import style from "@/styles/Home.module.css"
-import TitleSection from "../TitleSection"
+import React, { useEffect, useState } from "react";
+import TitleSection from "../TitleSection";
+import AllSectionLink from "../AllSectionLink";
+import { TeacherItem } from "./TeacherItem";
+import { getTeacherListApi } from "@/core/services/api/teacher/teacher.api";
 
-import {TeacherItem} from "./TeacherItem"
-
-const TeacherLanding = () =>{
-    //console.log({imageTeacher});
-    return(
-        <>
-        <div className={style.container}>
-        <div className="grid">
-                <h4 className={style.SectionTitle}> اساتید ما </h4>
-                </div>
-            <div className="grid">
-                <TeacherItem/>
-                <TeacherItem/>
-                <TeacherItem/>
-                <TeacherItem/>
-
-            </div>
-        </div>
-        </>
-    );
+const TeacherLanding = () => {
+  const [teachers, setTeachers] = useState([]);
+  const getTeacher = async () => {
+    const teacherList = await getTeacherListApi();
+    setTeachers(teacherList);
+  };
+  useEffect(() => {
+    getTeacher();
+  }, []);
+  return (
+    <div className="container">
+      <TitleSection title={"اساتید ما"} />
+      <div className="grid">
+        {teachers?.slice(-4).map((teacher) => (
+          <TeacherItem key={teacher._id} teacherItem={teacher}  />
+        ))}
+      </div>
+      <AllSectionLink href={"/courses"} title={"مشاهده موارد بیشتر"} />
+    </div>
+  );
 };
 
 export { TeacherLanding };

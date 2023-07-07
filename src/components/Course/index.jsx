@@ -8,7 +8,6 @@ const CoursesLanding = () => {
   const [courses, setCourses] = useState([]);
   const getPopularCourses = async () => {
     const response = await getAllCoursesApi();
-    console.log('res',response)
     setCourses(response);
   };
 
@@ -21,8 +20,8 @@ const CoursesLanding = () => {
       <div className="container">
         <TitleSection title={"دروس پر طرفدار"} />
         <div className="grid">
-          {courses?.slice(-4).map((item) => (
-            <CourseCard courseItem={item} key={item._id} />
+          {courses?.slice(-4).map((course) => (
+            <CourseCard courseItem={course} key={course._id} />
           ))}
         </div>
         <AllSectionLink href={"/courses"} title={"مشاهده موارد بیشتر"} />
