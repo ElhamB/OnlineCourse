@@ -12,7 +12,6 @@ const courses = () =>{
     const LoadApi = async () =>{
         try{
             const response = await axios.get('https://api.griffinteam.sepehracademy.ir/api/course/getall');
-            console.log(response.data);
             setData(response.data.result);
         }catch(error){}
     }

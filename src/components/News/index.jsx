@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import TitleSection from "../TitleSection";
 import AllSectionLink from "../AllSectionLink";
 import NewsItem from "./NewsItem";
-import { getTopNewsApi } from "@/core/services/api/news/news.api";
+import { getNewsListApi } from "@/core/services/api/news/news.api";
 
 const index = () => {
   const [news, setNews] = useState([]);
   const getTopNews = async () => {
-    const response = await getTopNewsApi();
+    const response = await getNewsListApi();
     setNews(response)
   };
   useEffect(() => {

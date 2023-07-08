@@ -7,38 +7,39 @@ import TitleSection from "@/components/News/TitleSection";
 import Category from "@/components/News/Category";
 import NewsItemSide from "@/components/News/NewsItemSide";
 import NewsListItems from "@/components/News/NewsListItems";
-import { getNewsListApi,getTopNewsApi } from "@/core/services/api/news/news.api";
+import { getNewsListApi } from "@/core/services/api/news/news.api";
 
 const News = () => {
   const [news, setNews] = useState([]);
-  const [topNews, setTopNews] = useState([]);
 
   const getNewsList = async () => {
     const response = await getNewsListApi();
-    console.log('res',response)
-    setNews(response)
-  };
-  const getTopNews = async () => {
-    const response = await getTopNewsApi();
-    setTopNews(response)
+    setNews(response);
   };
   useEffect(() => {
     getNewsList();
-    getTopNews();
   }, []);
   return (
     <>
       <div className={styles.blogContainer + " grid"}>
         <div className="container">
           <div className="grid">
-            {topNews.slice(0, 5).map((newsItem) => (
-              <div className="col-3">
-                <TopNewsItem key={newsItem.id} newsItem={newsItem} />
-              </div>
-            ))}
+            <div className="col-12 md:col-6 lg:col-3">
+              {news.slice(-2).map((newsItem) => (
+                <TopNewsItem key={newsItem._id} newsItem={newsItem} />
+              ))}
+            </div>
+            <div className="col-12 md:col-6 lg:col-6">
+              {news.slice(-3, -2).map((newsItem) => (
+                <TopNewsItem key={newsItem._id} newsItem={newsItem} />
+              ))}
+            </div>
 
-            {/* <div className="col-6"></div>
-          <div className="col-3"></div> */}
+            <div className="col-12 md:col-6 lg:col-3">
+              {news.slice(-5, -3).map((newsItem) => (
+                <TopNewsItem key={newsItem._id} newsItem={newsItem} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -48,14 +49,14 @@ const News = () => {
             <SearchBox />
             <TitleSection title={"محبوب ترین ها"} />
             {news.slice(0, 4).map((newsItem) => (
-                <NewsItemSide key={newsItem.id} newsItem={newsItem} />
+              <NewsItemSide key={newsItem._id} newsItem={newsItem} />
             ))}
             <TitleSection title={"دسته بندی ها"} />
             <Category />
           </div>
           <div className="col-9">
-          <TitleSection title={"جدید ترین ها"} />
-            <NewsListItems newsList={news}/>     
+            <TitleSection title={"جدید ترین ها"} />
+            <NewsListItems newsList={news} />
           </div>
         </div>
       </div>

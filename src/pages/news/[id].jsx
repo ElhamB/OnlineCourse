@@ -1,10 +1,9 @@
 import { useRouter } from "next/router";
 import MainLayout from "@/components/common/MainLayout";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BreadCrumb } from "primereact/breadcrumb";
-import imageNews from "@/assets/images/image-news.png";
 import SearchBox from "@/components/News/SearchBox";
 import TitleSection from "@/components/News/TitleSection";
 import Category from "@/components/News/Category";
@@ -15,10 +14,21 @@ import imageUser from "@/assets/images/user.png";
 import Description from "@/components/Description/Description";
 import styles from "@/styles/News.module.css";
 import CommentForm from "@/components/Comment/CommentForm";
+import { GetNewsByIdApi } from "@/core/services/api/news/news.api";
 
 const NewsDetails = () => {
+  const [newsData, setNewsData] = useState({});
+
   const router = useRouter();
   const { id } = router.query;
+
+  const getNewsDetails = async () => {
+    const newsDetailsData = GetNewsByIdApi(id);
+    setNewsData(newsDetailsData);
+  };
+  useEffect(() => {
+    getNewsDetails();
+  },[]);
   const items = [
     {
       label: "صفحه ی اصلی",
@@ -26,10 +36,12 @@ const NewsDetails = () => {
         router.push("/");
       },
     },
-    { label: "تکنولوژی",
-    command: () => {
-      router.push("/news");
-    }, },
+    {
+      label: "تکنولوژی",
+      command: () => {
+        router.push("/news");
+      },
+    },
   ];
 
   const comments = [
@@ -92,10 +104,10 @@ const NewsDetails = () => {
           <div className={styles.topdetailsNews + " col-9"}>
             <Link href={"/category"} className={styles.categoryWrapper}>
               <span className={styles.categoryContainer}>
-                <span data-text="وب">وب</span>
+                <span data-text="وب">{newsData.category}</span>
               </span>
             </Link>
-            <h1>اشنایی با کتابخانه ی react</h1>
+            <h1>{newsData.title}</h1>
             <div
               className={
                 styles.topCaption + " grid mb-2 border-bottom-1 border-gray-200"
@@ -150,7 +162,7 @@ const NewsDetails = () => {
             </div>
             <BreadCrumb model={items} className="mt-2 mb-3" />
             <div className="flex justify-content-center mt-2 mb-3">
-              <Image alt={"b"} src={imageNews} />
+              <Image alt={newsData.title} src={newsData.image} />
             </div>
 
             <Description title={"توضیحات مقاله"} desc={"توضیحات مقاله"} />
@@ -160,7 +172,7 @@ const NewsDetails = () => {
             />
             <NewsSlider />
             <Comment comments={comments} />
-            <CommentForm/>
+            <CommentForm />
           </div>
           <div className="col-3">
             <SearchBox />
