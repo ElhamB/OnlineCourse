@@ -49,3 +49,7 @@ list-style: none;
 .TeacherCard ul li a:hover,.TeacherCard ul li a:focus{
     color: #575757;
 }
+.ltr{
+  direction: ltr;
+  text-align: left;
+}
