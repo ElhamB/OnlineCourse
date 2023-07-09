@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import userImage from "@/assets/images/user.png";
-import styles from "@/styles/News.module.css";
 import { Paginator } from "primereact/paginator";
 import Link from "next/link";
+import styles from "@/styles/News.module.css";
 
 const NewsListItems = ({ newsList }) => {
   const router = useRouter();

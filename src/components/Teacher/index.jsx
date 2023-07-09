@@ -21,7 +21,7 @@ const TeacherLanding = () => {
           <TeacherItem key={teacher._id} teacherItem={teacher}  />
         ))}
       </div>
-      <AllSectionLink href={"/courses"} title={"مشاهده موارد بیشتر"} />
+      <AllSectionLink href={"/teachers"} title={"مشاهده موارد بیشتر"} />
     </div>
   );
 };
