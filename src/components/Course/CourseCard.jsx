@@ -9,9 +9,9 @@ import { Button } from "primereact/button";
 
 const CourseCard = ({ courseItem }) => {
   const router = useRouter();
-  const studentNumber = courseItem.students.length;
+  const studentNumber = courseItem?.students?.length;
   return (
-    <div className="col-3">
+    <div className="col-12 md:col-4 lg:col-3">
       <figure
         className={style.CourseCard}
         onClick={() =>

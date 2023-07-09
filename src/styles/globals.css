@@ -375,3 +375,7 @@ input:focus {
  .p-breadcrumb ul li .p-menuitem-link:focus .p-menuitem-text,.p-breadcrumb ul li .p-menuitem-link:hover .p-menuitem-text{
   color: var(--blue-color);
  }
+ .p-accordion .p-accordion-header .p-accordion-header-link .p-accordion-toggle-icon {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
